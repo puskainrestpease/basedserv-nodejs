@@ -1,0 +1,18 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Tumanov Maxim",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
