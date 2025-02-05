@@ -1,11 +1,10 @@
-const express = require('express');
-const app = express();
+const TelegramBot = require('node-telegram-bot-api');
+const token = 'токен'
+const bot = new TelegramBot(token, { polling: true });
 
-app.get('/', (req, res) => {
-  res.send('<h1>Привет, Октагон!</h1>');
+bot.onText(/\/start/, (msg) => {
+  const chatId = msg.chat.id;
+  bot.sendMessage(chatId, 'Привет, октагон!');
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Сервер запущен на http://localhost:${PORT}`);
-});
+console.log('ехала');
